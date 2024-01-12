@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.TextField?>-->
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pages" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parks.controller4">
+   <children>
+      <TableView fx:id="ebtryexitcord" layoutX="175.0" layoutY="87.0" onSort="#fourth" prefHeight="440.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="RecordID" prefWidth="68.5" text="入场编号" />
+          <TableColumn fx:id="LicensePlate" prefWidth="116.0" text="车牌号码" />
+            <TableColumn fx:id="EntryTime" prefWidth="128.0" text="入场时间" />
+            <TableColumn fx:id="ExitTime" prefWidth="131.0" text="出场时间" />
+            <TableColumn fx:id="ParkingLocation" prefWidth="93.5" text="车位位置" />
+            <TableColumn fx:id="ChargeAmount" prefWidth="95.0" text="缴费金额" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ID3" layoutX="3.0" layoutY="87.0" prefHeight="45.0" prefWidth="172.0" promptText="请输入入场编号" />
+      <TextField fx:id="palte3" layoutX="3.0" layoutY="156.0" prefHeight="45.0" prefWidth="172.0" promptText="请输入车牌号码" />
+      <TextField fx:id="money" layoutX="5.0" layoutY="397.0" prefHeight="45.0" prefWidth="172.0" promptText="请输入缴费金额" />
+      <Button fx:id="addth" layoutX="3.0" layoutY="455.0" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="172.0" text="查      询" textFill="#ff7300" />
+      <Button fx:id="Dete" layoutX="4.0" layoutY="497.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="172.0" text="删      除" textFill="RED" />
+      <TextField fx:id="coming" layoutX="2.0" layoutY="222.0" onAction="#comedate" prefHeight="30.0" prefWidth="172.0" promptText="入场时间" />
+      <TextField fx:id="outtime" layoutX="3.0" layoutY="283.0" onAction="#outdate" prefHeight="30.0" prefWidth="172.0" promptText="出场时间" />
+      <Pagination fx:id="page3" layoutX="175.0" layoutY="527.0" prefHeight="53.0" prefWidth="633.0" />
+      <TextField fx:id="lot3" layoutX="4.0" layoutY="338.0" prefHeight="45.0" prefWidth="172.0" promptText="请输入车位位置" />
+      <Button fx:id="excel" layoutX="5.0" layoutY="542.0" mnemonicParsing="false" onAction="#Importing" prefHeight="30.0" prefWidth="172.0" text="导  出  数  据" textFill="RED" />
+   </children>
+    <stylesheets>
+        <URL value="@fourth.css" />
+    </stylesheets>
+</AnchorPane>

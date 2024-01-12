@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parks.controller2">
+   <children>
+      <TextField fx:id="SpaceID1" layoutX="31.0" layoutY="67.0" promptText="请输入车位编号" />
+      <TextField fx:id="SpaceType1" layoutX="31.0" layoutY="128.0" promptText="请输入车位类型" />
+      <TextField fx:id="SpaceLocation1" layoutX="31.0" layoutY="244.0" promptText="请输入车位位置" />
+      <TextField fx:id="Plate1" layoutX="31.0" layoutY="303.0" promptText="请输入车牌号码" />
+      <TableView fx:id="biao" layoutX="207.0" layoutY="67.0" prefHeight="353.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="spaceID" prefWidth="64.0" text="车位编号" />
+          <TableColumn fx:id="spaceType" prefWidth="89.5" text="车位类型" />
+            <TableColumn fx:id="spaceStats" text="车位状态" />
+            <TableColumn fx:id="spaceLocation" prefWidth="88.0" text="车位位置" />
+            <TableColumn fx:id="licensePlate" prefWidth="145.0" text="车牌号码" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#DELETE" text="删除" />
+                  <MenuItem mnemonicParsing="false" onAction="#EDIT" text="更新" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Pagination fx:id="pages" layoutX="236.0" layoutY="420.0" prefHeight="46.0" prefWidth="407.0" />
+      <Button layoutX="31.0" layoutY="343.0" mnemonicParsing="false" onAction="#Search" prefHeight="23.0" prefWidth="71.0" text="查 询" textFill="#ff7900">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button layoutX="116.0" layoutY="343.0" mnemonicParsing="false" onAction="#add" text="增添数据" textFill="#ff7900">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <TextField fx:id="Status" layoutX="31.0" layoutY="188.0" promptText="请输入车位状态" />
+      <Button layoutX="31.0" layoutY="385.0" mnemonicParsing="false" onAction="#saveEdit" prefHeight="35.0" prefWidth="161.0" text="保  存  编  辑" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+   </children>
+    <stylesheets>
+        <URL value="@second.css" />
+    </stylesheets>
+</AnchorPane>

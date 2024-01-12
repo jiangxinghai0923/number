@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.TextField?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import java.net.URL?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parks.controller3">
+   <children>
+      <TextField fx:id="SpaceID2" layoutX="14.0" layoutY="72.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车位编号" />
+      <TextField fx:id="Plate2" layoutX="14.0" layoutY="135.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车牌号码" />
+      <TextField fx:id="tel" layoutX="14.0" layoutY="365.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车主联系方式" />
+      <TextField fx:id="Name" layoutX="14.0" layoutY="250.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车主大名" />
+      <TableView fx:id="vehicle" layoutX="175.0" layoutY="72.0" prefHeight="403.0" prefWidth="690.0">
+        <columns>
+          <TableColumn fx:id="VehicleID" prefWidth="71.0" text="车位编号" />
+          <TableColumn fx:id="LicensePlate" prefWidth="109.0" text="车牌号码" />
+            <TableColumn fx:id="VehicleType" prefWidth="103.5" text="车辆类型" />
+            <TableColumn fx:id="VehicleColor" prefWidth="84.5" text="车辆颜色" />
+            <TableColumn fx:id="OwnerName" prefWidth="92.5" text="车主大名" />
+            <TableColumn fx:id="OwnerContact" prefWidth="225.5" text="联系方式" />
+        </columns>
+          <contextMenu>
+          <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#DELETE" text="删除" />
+                  <MenuItem mnemonicParsing="false" onAction="#EDIT" text="更新" />
+              </items>
+          </ContextMenu>
+      </contextMenu>
+      </TableView>
+      <Button fx:id="search2" layoutX="14.0" layoutY="395.0" mnemonicParsing="false" onAction="#scosearch" prefHeight="30.0" prefWidth="55.0" text="查询" />
+      <Button fx:id="fix" layoutX="120.0" layoutY="395.0" mnemonicParsing="false" onAction="#saveEdit" prefHeight="30.0" prefWidth="55.0" text="修改" />
+      <Button fx:id="add2" layoutX="14.0" layoutY="438.0" mnemonicParsing="false" onAction="#secadd" prefHeight="37.0" prefWidth="161.0" text="增添" />
+      <TextField fx:id="Color" layoutX="14.0" layoutY="308.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车辆颜色" />
+      <Pagination fx:id="pages2" layoutX="178.0" layoutY="509.0" prefHeight="56.0" prefWidth="690.0" />
+      <TextField fx:id="Type2" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="161.0" promptText="请输入车辆类型" />
+   </children>
+    <stylesheets>
+        <URL value="@third.css" />
+    </stylesheets>
+</AnchorPane>
